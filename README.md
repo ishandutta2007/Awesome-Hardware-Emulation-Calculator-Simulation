@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Hardware-Emulation-Calculator-Simulation?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -63,9 +63,9 @@ The consumer EdTech SaaS layer exhibits **strong consolidation** around Google (
 
 ## 💻 Open-Source GitHub Projects
 
-*Sorted descending by GitHub stargazers count.* Each repository features a live star badge linking directly to its stargazer community.
+*Sorted descending by GitHub stargazers count.* Each repository features a live Stars_Badge linking directly to its stargazer community.
 
-| Project & Repo | Stars Badge | License | Description |
+| Project & Repo | Stars_Badge | License | Description |
 | :--- | :---: | :---: | :--- |
 | **[SymPy](https://github.com/sympy/sympy)** | [![SymPy Stars](https://img.shields.io/github/stars/sympy/sympy?style=social&color=white)](https://github.com/sympy/sympy/stargazers) | `BSD-3-Clause` | 🐍 A comprehensive computer algebra system (CAS) written in pure Python for symbolic integration, calculus, and matrix mathematics. |
 | **[Logisim-evolution](https://github.com/logisim-evolution/logisim-evolution)** | [![Logisim Stars](https://img.shields.io/github/stars/logisim-evolution/logisim-evolution?style=social&color=white)](https://github.com/logisim-evolution/logisim-evolution/stargazers) | `GPL-3.0` | 🔌 Modern digital logic designer and processor architecture simulation tool with chronogram analysis and board synthesis support. |
@@ -95,7 +95,7 @@ Contributions are warmly welcomed! 🤝
 
 1. 🍴 **Fork** this repository.
 2. 🌿 Create a branch for your addition (`git checkout -b add-my-simulator`).
-3. 📝 Add your entry under the appropriate table (ensure open-source additions include real star counts and links).
+3. 📝 Add your entry under the appropriate table (ensure open-source additions include real Stars_Counts and links).
 4. 🚀 Open a **Pull Request** explaining why the tool or emulator should be included.
 
 ---
