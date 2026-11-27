@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="0.75" stroke-opacity="0.25" />
+      <circle cx="40" cy="40" r="1" fill="#60a5fa" fill-opacity="0.3" />
+    </pattern>
+
+    <!-- Filter for soft blur & glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+    </filter>
+  </defs>
+
+  <style>
+    .retro-grid {
+      animation: pulseGrid 8s ease-in-out infinite alternate;
+    }
+    .orb-float-1 {
+      animation: floatOrb1 12s ease-in-out infinite alternate;
+    }
+    .orb-float-2 {
+      animation: floatOrb2 10s ease-in-out infinite alternate;
+    }
+    .signal-beam {
+      stroke-dasharray: 10 30;
+      animation: signalFlow 3s linear infinite;
+    }
+    .circuit-pulse {
+      animation: circuitBlink 4s ease-in-out infinite;
+    }
+    .banner-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+    }
+    .banner-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+    @keyframes signalFlow {
+      from { stroke-dashoffset: 80; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(40px, 25px) scale(1.15); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(-35px, -20px) scale(1.2); }
+    }
+    @keyframes circuitBlink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.85; }
+    }
+  </style>
+
+  <!-- Deep Base Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Background Dynamic Glowing Orbs (placed strictly in background) -->
+  <g class="orb-float-1">
+    <circle cx="180" cy="110" r="160" fill="url(#glowGrad1)" filter="url(#glow)" />
+  </g>
+  <g class="orb-float-2">
+    <circle cx="1020" cy="310" r="180" fill="url(#glowGrad2)" filter="url(#glow)" />
+  </g>
+
+  <!-- Matrix Grid Texture -->
+  <rect width="1200" height="420" fill="url(#gridPattern)" class="retro-grid" />
+
+  <!-- Subtle Hardware Circuit Traces (Background) -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.35" class="circuit-pulse">
+    <path d="M 80,40 L 240,40 L 290,90 L 520,90" />
+    <circle cx="520" cy="90" r="3" fill="#38bdf8" />
+    <path d="M 980,360 L 880,360 L 830,310 L 680,310" />
+    <circle cx="680" cy="310" r="3" fill="#818cf8" />
+    <path d="M 1120,80 L 1040,80 L 1000,120 L 920,120" />
+    <circle cx="920" cy="120" r="3" fill="#c084fc" />
+  </g>
+  <!-- Dynamic Signal Beam -->
+  <path d="M 80,40 L 240,40 L 290,90 L 520,90" stroke="#67e8f9" stroke-width="2" fill="none" class="signal-beam" />
+  <path d="M 980,360 L 880,360 L 830,310 L 680,310" stroke="#a78bfa" stroke-width="2" fill="none" class="signal-beam" />
+
+  <!-- Center Presentation Container (Card Backdrop) -->
+  <rect x="70" y="55" width="1060" height="310" rx="20" fill="url(#cardGrad)" stroke="#374151" stroke-width="1.2" />
+
+  <!-- Top Pill / Badge in Card -->
+  <rect x="110" y="90" width="360" height="32" rx="16" fill="#0f172a" stroke="#0284c7" stroke-width="1" />
+  <circle cx="126" cy="106" r="4.5" fill="#38bdf8" />
+  <text x="140" y="111" class="badge-text">HARDWARE EMULATION &amp; SIMULATION</text>
+
+  <!-- Title (Strictly Foreground) -->
+  <text x="110" y="175" class="banner-title" fill="url(#primaryGrad)">Hardware Emulation &amp; Calculator Simulation</text>
+
+  <!-- Subtitle (Strictly Foreground) -->
+  <text x="110" y="218" class="banner-subtitle">
+    The Definitive Directory of TI, HP, Casio &amp; Sharp Emulators, Symbolic CAS, and Digital Circuit Simulators
+  </text>
+
+  <!-- Feature Pills / Highlights -->
+  <!-- Pill 1: Cycle-Accurate Emulators -->
+  <g transform="translate(110, 260)">
+    <rect width="210" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0">🕹️ Cycle-Accurate Emus</text>
+  </g>
+
+  <!-- Pill 2: Symbolic CAS & Math -->
+  <g transform="translate(335, 260)">
+    <rect width="195" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0">🧮 Symbolic CAS &amp; Math</text>
+  </g>
+
+  <!-- Pill 3: Digital Logic Simulation -->
+  <g transform="translate(545, 260)">
+    <rect width="215" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0">⚡ Digital Logic &amp; HDL</text>
+  </g>
+
+  <!-- Pill 4: Open Hardware & WASM -->
+  <g transform="translate(775, 260)">
+    <rect width="220" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0">🌐 WebAssembly &amp; Python</text>
+  </g>
+
+  <!-- Decorative Accent Dots -->
+  <circle cx="1090" cy="85" r="4" fill="#38bdf8" />
+  <circle cx="1105" cy="85" r="4" fill="#818cf8" />
+  <circle cx="1120" cy="85" r="4" fill="#c084fc" />
+</svg>
